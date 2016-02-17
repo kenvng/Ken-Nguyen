@@ -1,0 +1,342 @@
+body {
+	background-color: white;
+	text-color: black;
+	margin: auto;				/* horizontally center an element within its container */
+    min-width: auto;			/* width of the page compare to the browser */
+    min-height: auto;
+    max-width: 800px;
+    max-height: 500px;
+    overflow: hidden; /* this is important for animation so it wont expanding the page */
+}
+
+div.outer {
+	background-color: #ececec;		/* light grey */
+	padding: 20px 20px 40px 20px;
+}
+
+div.inner {
+	border-top: 5px solid black;
+	border-bottom: 5px solid black;
+	padding: 40px 40px 40px 40px;
+}
+
+header {
+
+}
+
+.header-nav {
+	text-align: center;
+}
+
+.header-h1 {
+	text-align: center;
+}
+
+/* HEADING 1 ANIMATION */
+h1 {
+    position:relative;
+    -webkit-animation:h1Animation 5s;
+}
+@-webkit-keyframes h1Animation{					/*Animation for our 2nd header,growing header*/
+    0%   {-webkit-transform: scale(1,2);}		/*Start of the page,scale the header 1 times its width and 2 times its height*/
+    25%   {-webkit-transform: scale(2,3);}
+    50%  {-webkit-transform: scale(3,4);}
+    75%  {-webkit-transform: scale(4,5);}
+    100%  { -webkit-transform: scale(0,0);}		/*Go back to its original size*/
+}
+
+section {
+	text-align: left;
+	margin: 0 0 50px 0;
+}
+
+.section-1 {
+	text-align: left;
+}
+
+.section-1-h3 {
+	text-align: left;
+}
+
+.section-1-p {
+	text-align: left;
+}
+
+footer {
+	text-align: center;
+}
+
+
+.footer.nav {
+	text-align: center;
+}
+
+.footer-p-copyright {
+	text-align: center;
+}
+
+
+
+
+
+/* Portfolio slide show start here */
+/* Portfolio slide show start here */
+/* Portfolio slide show start here */
+@font-face {
+    font-family: 'WebSymbolsRegular';
+    src: url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.eot');
+    src: url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.woff') format('woff'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont.ttf') format('truetype'), url('http://html5css3demos.bplaced.net/css3-slider-v3/websymbols-regular-webfont#WebSymbolsRegular') format('svg');
+}
+
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(http://subtlepatterns.com/patterns/dark_wall.png);
+    background-repeat: repeat;
+    height: 500px;
+    padding: 1px;
+}
+
+h1 { color: white }
+
+
+/* Portfolio slide show start here */
+/* Portfolio slide show start here */
+/* Portfolio slide show start here */
+#slideshow-wrap {
+    display: block;
+    height: 320px;
+    min-width: 260px;
+    max-width: 640px;
+    margin: auto;
+    border: 12px rgba(255,255,240,1) solid;
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    margin-top: 20px;
+    position: relative;
+}
+
+#slideshow-inner {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    overflow: hidden;
+    position: relative;
+}
+
+#slideshow-inner>ul {
+    list-style: none;
+    height: 100%;
+    width: 500%;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#slideshow-inner>ul>li {
+    width: 20%;
+    height: 320px;
+    float: left;
+    position: relative;
+}
+
+#slideshow-inner>ul>li>img {
+    margin: auto;
+    height: 100%;
+}
+
+#slideshow-wrap input[type=radio] {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    z-index: 100;
+    visibility: hidden;
+}
+
+#slideshow-wrap label:not(.arrows):not(.show-description-label) {
+    position: absolute;
+    left: 50%;
+    bottom: -45px;
+    z-index: 100;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(200,200,200,1);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 3px rgba(0,0,0,.8);
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+#slideshow-wrap label:not(.arrows):active { bottom: -46px }
+
+#slideshow-wrap input[type=radio]#button-1:checked~label[for=button-1] { background-color: rgba(100,100,100,1) }
+
+#slideshow-wrap input[type=radio]#button-2:checked~label[for=button-2] { background-color: rgba(100,100,100,1) }
+
+#slideshow-wrap input[type=radio]#button-3:checked~label[for=button-3] { background-color: rgba(100,100,100,1) }
+
+#slideshow-wrap input[type=radio]#button-4:checked~label[for=button-4] { background-color: rgba(100,100,100,1) }
+
+#slideshow-wrap input[type=radio]#button-5:checked~label[for=button-5] { background-color: rgba(100,100,100,1) }
+
+#slideshow-wrap input[type=radio]#button-6:checked~label[for=button-6] { background-color: rgba(100,100,100,1) } /* new slide */
+
+
+#slideshow-wrap label[for=button-1] { margin-left: -56px }
+
+#slideshow-wrap label[for=button-2] { margin-left: -38px }
+
+#slideshow-wrap label[for=button-3] { margin-left: -20px }
+
+#slideshow-wrap label[for=button-4] { margin-left: -2px }
+
+#slideshow-wrap label[for=button-5] { margin-left: 16px }
+
+#slideshow-wrap label[for=button-6] { margin-left: 34px }
+
+
+#slideshow-wrap input[type=radio]#button-1:checked~#slideshow-inner>ul { left: 0 }
+
+#slideshow-wrap input[type=radio]#button-2:checked~#slideshow-inner>ul { left: -100% }
+
+#slideshow-wrap input[type=radio]#button-3:checked~#slideshow-inner>ul { left: -200% }
+
+#slideshow-wrap input[type=radio]#button-4:checked~#slideshow-inner>ul { left: -300% }
+
+#slideshow-wrap input[type=radio]#button-5:checked~#slideshow-inner>ul { left: -400% }
+
+#slideshow-wrap input[type=radio]#button-6:checked~#slideshow-inner>ul { left: -500% }
+
+
+label.arrows {
+    font-family: 'WebSymbolsRegular';
+    font-size: 25px;
+    color: rgb(255,255,240);
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    display: none;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: transparent;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    text-shadow: 0px 0px 3px rgba(0,0,0,.8);
+}
+
+label.arrows:hover { opacity: 1 }
+
+label.arrows:active { margin-top: -23px }
+
+input[type=radio]#button-1:checked~.arrows#arrow-2, 
+input[type=radio]#button-2:checked~.arrows#arrow-3, 
+input[type=radio]#button-3:checked~.arrows#arrow-4, 
+input[type=radio]#button-4:checked~.arrows#arrow-5,
+input[type=radio]#button-5:checked~.arrows#arrow-6,
+input[type=radio]#button-6:checked~.arrows#arrow-1 {
+    right: -55px;
+    display: block;
+}
+
+input[type=radio]#button-1:checked~.arrows#arrow-6,
+input[type=radio]#button-2:checked~.arrows#arrow-1, 
+input[type=radio]#button-3:checked~.arrows#arrow-2, 
+input[type=radio]#button-4:checked~.arrows#arrow-3, 
+input[type=radio]#button-5:checked~.arrows#arrow-4,
+input[type=radio]#button-6:checked~.arrows#arrow-5 {
+    left: -55px;
+    display: block;
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+input[type=radio]#button-1:checked~.arrows#arrow-6 { left: -85px }
+
+input[type=radio]#button-2:checked~.arrows#arrow-1 { left: 5px }
+
+input[type=radio]#button-3:checked~.arrows#arrow-2 { left: -13px }
+
+input[type=radio]#button-4:checked~.arrows#arrow-3 { left: -30px }
+
+input[type=radio]#button-5:checked~.arrows#arrow-4 { left: -50px }
+
+input[type=radio]#button-6:checked~.arrows#arrow-5 { left: -65px }
+
+.description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    font-family: 'Yanone Kaffeesatz';
+    z-index: 1000;
+}
+
+.description input { visibility: hidden }
+
+.description label {
+    font-family: 'WebSymbolsRegular';
+    background-color: rgba(255,255,240,1);
+    position: relative;
+    left: -17px;
+    top: 00px;
+    width: 40px;
+    height: 27px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 7px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    z-index: 5;
+    color: rgb(20,20,20);
+}
+
+#slideshow-inner>ul>li:hover .description label { opacity: 1 }
+
+.description input[type=checkbox]:checked~label { opacity: 1 }
+
+.description .description-text {
+    background-color: rgba(255,255,230,.5);
+    padding-left: 45px;
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    top: -35px;
+    z-index: 4;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    color: rgb(20,20,20);
+}
+
+.description input[type=checkbox]:checked~.description-text { opacity: 1 }
