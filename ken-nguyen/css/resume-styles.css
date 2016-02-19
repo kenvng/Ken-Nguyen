@@ -6,6 +6,7 @@ body {
     min-height: auto;
     max-width: 800px;
     max-height: 500px;
+    line-height: 1.5;
 }
 
 div.outer {
